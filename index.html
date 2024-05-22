@@ -1,0 +1,276 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Human4DiT</title>
+<link href="./js/style.css" rel="stylesheet">
+<script type="text/javascript" src="./js/jquery.mlens-1.0.min.js"></script>
+<script type="text/javascript" src="./js/jquery.js"></script>
+
+
+<style>
+  p.serif{
+    font-family:"Times New Roman", Times, serif;
+  }
+  p.sansserif{
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .text-center {
+    text-align: center;
+}
+</style>
+  
+</head>
+
+<body>
+<div class="content">
+  <h1><strong>Human4DiT: Free-view Human Video Generation with 4D Diffusion Transformer</strong></h1>
+  <p id="authors">Anonymous Authors<br>
+  <a>Submission ID 938</sup></a>
+ </p>
+
+
+  <div class="row">
+    <div class="col-full">
+      <img class="summary-img" src="figs/teaser2.jpg" style="width:100%;">
+    </div>
+  </div>
+  
+  <h3 style="text-align:center"><em>Given a reference image, SMPL sequences and camera parameters, our method is capable of generating free-view dynamic human videos.</em></h3>
+</div>
+
+
+<div class="content">
+  <p style="text-align:left; font-size: 2em; font-weight: bold" class="serif">Results -- Monocular Video</p>
+  
+  <div class="row">
+    <div class="col-full">
+      <video  width="100%" loop controls>
+        <source src="results/main_results/mono_results_new1.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-full">
+      <video  width="100%" loop controls>
+        <source src="results/main_results/mono_results_new2.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</div>
+
+<!-- results -->
+<div class="content">
+  <p style="text-align:left; font-size: 2em; font-weight: bold" class="serif">Comparisons -- Monocular Video </p>
+
+  <div class="row">
+    <div class="col-full">
+      <video  width="100%" loop controls>
+        <source src="results/mono_comp/mono_video1.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-full">
+      <video  width="100%" loop controls>
+        <source src="results/mono_comp/mono_video2.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-full">
+      <video  width="100%" loop controls>
+        <source src="results/mono_comp/mono_video3.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-full">
+      <video  width="100%" loop controls>
+        <source src="results/mono_comp/mono_video4.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-full">
+      <video  width="100%" loop controls>
+        <source src="results/mono_comp/mono_video5.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+
+</div>
+
+<div class="content">
+  <p style="text-align:left; font-size: 2em; font-weight: bold" class="serif">Comparisons -- Multi-view Video</p>
+  <div class="row">
+    <div class="col-full">
+      <video  width="100%" loop controls>
+        <source src="results/main_results/mv_results1.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div> 
+  <div class="row">
+    <div class="col-full">
+      <video  width="100%" loop controls>
+        <source src="results/main_results/mv_results2.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+</div>
+
+<div class="content">
+  <p style="text-align:left; font-size: 2em; font-weight: bold" class="serif">Results -- Static 3D Video</p>
+  <div class="row">
+    <div class="col-full">
+      <video  width="100%" loop controls>
+        <source src="results/main_results/3d_results1.mp4" type="video/mp4">
+      </video>
+      <video  width="100%" loop controls>
+        <source src="results/main_results/3d_results2.mp4" type="video/mp4">
+      </video>
+      <video  width="100%" loop controls>
+        <source src="results/main_results/3d_results3.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</div>
+
+<!-- comparisons -->
+<div class="content">
+  <p style="text-align:left; font-size: 2em; font-weight: bold" class="serif">Comparisons -- Static 3D Video</p>
+
+    <div class="row">
+      <div class="col-full">
+        <video  width="100%" loop controls>
+          <source src="results/3d_comp/3d_video1.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-full">
+        <video  width="100%" loop controls>
+          <source src="results/3d_comp/3d_video2.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div><div class="row">
+      <div class="col-full">
+        <video  width="100%" loop controls>
+          <source src="results/3d_comp/3d_video3.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div><div class="row">
+      <div class="col-full">
+        <video  width="100%" loop controls>
+          <source src="results/3d_comp/3d_video4.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="content">
+  <p style="text-align:left; font-size: 2em; font-weight: bold" class="serif">Results -- Free-view Video</p>
+  <div class="row">
+    <div class="col-full">
+      <video  width="100%" muted loop autoplay="autoplay">
+        <source src="results/main_results/4d_results5.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-full">
+      <video  width="100%" muted loop autoplay="autoplay">
+        <source src="results/main_results/4d_results4.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-full">
+      <video  width="100%" muted loop autoplay="autoplay">
+        <source src="results/main_results/4d_results2.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-full">
+      <video  width="100%" muted loop autoplay="autoplay">
+        <source src="results/main_results/4d_results3.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-full">
+      <video  width="100%" muted loop autoplay="autoplay">
+        <source src="results/main_results/4d_results1.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+  <p style="text-align:left; font-size: 2em; font-weight: bold" class="serif">Comparisons -- Free-view Video</p>
+
+  <div class="row">
+    <div class="col-full">
+      <video  width="100%" loop controls>
+        <source src="results/4d_comp/4d_video1.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-full">
+      <video  width="100%" loop controls>
+        <source src="results/4d_comp/4d_video2.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-full">
+      <video  width="100%" loop controls>
+        <source src="results/4d_comp/4d_video3.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-full">
+      <video  width="100%" loop controls>
+        <source src="results/4d_comp/4d_video4.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+</div>    
+
+
+</body>
+
+<script>
+var videos = document.getElementsByClassName("clickplay");
+for (var i = 0; i < videos.length; i++) {
+  videos[i].addEventListener("click", function() {
+    this.play();
+  });
+  videos[i].addEventListener("ended", function() {
+    this.pause();
+    this.currentTime = 0;
+  });
+}
+
+document.querySelectorAll('.info-container').forEach(function(container) {
+  container.addEventListener('mouseover', function() {
+    var infoText = container.querySelector('.info-text');
+    infoText.style.display = 'block';
+  });
+
+  container.addEventListener('mouseout', function() {
+    var infoText = container.querySelector('.info-text');
+    infoText.style.display = 'none';
+  });
+});
+</script>
+
+</html>
