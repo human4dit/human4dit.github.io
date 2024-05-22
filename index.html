@@ -25,7 +25,6 @@
 <div class="content">
   <h1><strong>Human4DiT: Free-view Human Video Generation with 4D Diffusion Transformer</strong></h1>
   <p id="authors">Anonymous Authors<br>
-  <a>Submission ID 938</sup></a>
  </p>
 
 
@@ -36,6 +35,25 @@
   </div>
   
   <h3 style="text-align:center"><em>Given a reference image, SMPL sequences and camera parameters, our method is capable of generating free-view dynamic human videos.</em></h3>
+</div>
+
+<div class="content">
+  
+  <p style="text-align:left; font-size: 2em; font-weight: bold" class="serif">Method</p>
+
+  <div class="row">
+    <div class="col-full">
+      <img class="summary-img" src="figs/pipeline.jpg" style="width:100%;">
+    </div>
+  </div>
+  
+  <p><b>The pipeline of Human4DiT.</b> our framework is based on 4D diffusion transformer, which adopts a cascaded structure consisting of the 2D image, the view transformer, and the temporal blocks.
+    The input contains a reference image, dynamic SMPL sequences, and camera parameters. 
+    Starting from a generated noisy latent representation, we then denoise it with multiple conditions. 
+    Firstly, the 2D image transformer block is designed to capture spatial self-attention within each frame. 
+    In addition, human identity extracted from reference image is also injected to ensure identity consistency.
+    Secondly, we use the view transformer block to learn correspondences across different viewpoints. 
+    Finally, we adopt a temporal transformer to capture temporal correlations with time embedding.</p>
 </div>
 
 
@@ -53,6 +71,63 @@
     <div class="col-full">
       <video  width="100%" loop controls>
         <source src="results/main_results/mono_results_new2.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+  <p style="text-align:left; font-size: 2em; font-weight: bold" class="serif">Results -- Free-view Video</p>
+  <div class="row">
+    <div class="col-full">
+      <video  width="100%" muted loop autoplay="autoplay">
+        <source src="results/main_results/4d_results5.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-full">
+      <video  width="100%" muted loop autoplay="autoplay">
+        <source src="results/main_results/4d_results4.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-full">
+      <video  width="100%" muted loop autoplay="autoplay">
+        <source src="results/main_results/4d_results2.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-full">
+      <video  width="100%" muted loop autoplay="autoplay">
+        <source src="results/main_results/4d_results3.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-full">
+      <video  width="100%" muted loop autoplay="autoplay">
+        <source src="results/main_results/4d_results1.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</div>
+
+
+<div class="content">
+  <p style="text-align:left; font-size: 2em; font-weight: bold" class="serif">Results -- Static 3D Video</p>
+  <div class="row">
+    <div class="col-full">
+      <video  width="100%" loop controls>
+        <source src="results/main_results/3d_results1.mp4" type="video/mp4">
+      </video>
+      <video  width="100%" loop controls>
+        <source src="results/main_results/3d_results2.mp4" type="video/mp4">
+      </video>
+      <video  width="100%" loop controls>
+        <source src="results/main_results/3d_results3.mp4" type="video/mp4">
       </video>
     </div>
   </div>
@@ -120,22 +195,6 @@
 
 </div>
 
-<div class="content">
-  <p style="text-align:left; font-size: 2em; font-weight: bold" class="serif">Results -- Static 3D Video</p>
-  <div class="row">
-    <div class="col-full">
-      <video  width="100%" loop controls>
-        <source src="results/main_results/3d_results1.mp4" type="video/mp4">
-      </video>
-      <video  width="100%" loop controls>
-        <source src="results/main_results/3d_results2.mp4" type="video/mp4">
-      </video>
-      <video  width="100%" loop controls>
-        <source src="results/main_results/3d_results3.mp4" type="video/mp4">
-      </video>
-    </div>
-  </div>
-</div>
 
 <!-- comparisons -->
 <div class="content">
@@ -172,44 +231,7 @@
 
 
 
-<div class="content">
-  <p style="text-align:left; font-size: 2em; font-weight: bold" class="serif">Results -- Free-view Video</p>
-  <div class="row">
-    <div class="col-full">
-      <video  width="100%" muted loop autoplay="autoplay">
-        <source src="results/main_results/4d_results5.mp4" type="video/mp4">
-      </video>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-full">
-      <video  width="100%" muted loop autoplay="autoplay">
-        <source src="results/main_results/4d_results4.mp4" type="video/mp4">
-      </video>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-full">
-      <video  width="100%" muted loop autoplay="autoplay">
-        <source src="results/main_results/4d_results2.mp4" type="video/mp4">
-      </video>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-full">
-      <video  width="100%" muted loop autoplay="autoplay">
-        <source src="results/main_results/4d_results3.mp4" type="video/mp4">
-      </video>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-full">
-      <video  width="100%" muted loop autoplay="autoplay">
-        <source src="results/main_results/4d_results1.mp4" type="video/mp4">
-      </video>
-    </div>
-  </div>
-</div>
+
 
 <div class="content">
   <p style="text-align:left; font-size: 2em; font-weight: bold" class="serif">Comparisons -- Free-view Video</p>
